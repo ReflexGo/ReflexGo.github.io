@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+// font-family: 'Roboto'
+// font-family: 'Roboto Slab'
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+$colorf: #4e4e4e;
+$fonts: "Roboto Slab";
+$fontsize: 16px;
+@mixin font($colorf:#4e4e4e, $fonts:"Roboto", $fontsize: 16px) {
+    font-family: $fonts;
+    color: $colorf; 
+    font-weight: bold;
+    font-size: $fontsize;
+}
+// подключить миксин @include font
+@mixin contain {
+    width: 70%;
+    margin: 0% auto;
+}
+.head {
+    width: 100%;
+    height: 123px;
+    background-color: #e5e5e5;
+}
+.contain {
+    @include contain;
+    height: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo  {
+    @include font($colorf,$fonts,$fontsize: 40px );
+
+}
+.menu-li {
+    list-style: none;
+    @include font($colorf,$fonts,$fontsize );
+}
+.menu-li:not(.lit) {
+    margin-right: 15px;
+}
+.menu-li:hover {
+    color:#1abb9c;
+}
+.contain-too {
+    @include contain;
+}
+.back {
+    height: 600px;
+    width: 100%;
+    background-image: url(../image/back.png);
+    background-color: blue;
+}
+.white-p {
+    @include font($colorf:#f3f3f3,$fonts:"Roboto Slab",$fontsize: 38px);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 210px;
+}
+.gray-p {
+    @include font($colorf:#a8a8a8,$fonts:"Roboto Slab",$fontsize:32px );
+    text-align: center;
+    position: relative;
+    top: 240px;
+}
+.button {
+    width: 140px;
+    height: 45px;
+    background-color: #3f8dbf;
+    margin-left: 40%;
+    position: relative;
+    top: 270px;
+}
+.button-p {
+    @include font($colorf: #ffffff,$fonts:"Roboto",$fontsize: 14px);
+    text-align: center;
+    padding-top: 15px;
+}
+.contain-three {
+    @include contain;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.category {
+    width: 23%;
+    height: 300px;
+    .elipse {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-top: 25%;
+        margin-left: 30%;
+    }
+}
+.elipse-1 {
+    background-color: #9d9abf;
+}
+.elipse-2 {
+    background-color: #d2514b;
+}
+.elipse-3 {
+    background-color:  #66a3c6;
+}
+.elipse-4 {
+    background-color: #e8c04f;
+}
+.el-img3 {
+    margin: 25% 30%;
+}
+.el-img1 {
+    margin: 25% 35%; 
+}
+.el-img2 {
+    margin: 30% 35%; 
+}
+.el-img4 {
+    margin: 40% 30%; 
+}
+.category-h {
+    @include font($colorf:#4e4e4e,$fonts:"Roboto Slab",$fontsize: 18px );
+    padding-top: 10px;
+    text-align: center;
+}
+.category-p {
+    @include font($colorf:#616161,$fonts:"Roboto Slab",$fontsize: 14px );
+    text-align: center;
+}
+.line {
+    width: 100%;
+    height: 2px;
+    opacity: 0.11;
+    background-color: black;
+}
+.contain-four {
+    @include contain;
+
+}
+.banners {
+    margin-top: 100px;
+    width: 32%;
+    height: 460px;
+}
+.banners-img1 {
+    background-image: url(../image/b1.jpg);
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+}
+.banners-img2 {
+    background-image: url(../image/b2.jpg);
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+}
+.banners-img3 {
+    background-image: url(../image/b3.jpg);
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+}
+.banners-h {
+    @include font($colorf:#4e4e4e,$fonts:"Roboto Slab",$fontsize:18px );
+}
+.banners-p1 {
+    @include font($colorf:#a8a8a8,$fonts:"Roboto Slab",$fontsize:13px )
+}
+.banners-p2 {
+    @include font($colorf:#5c5c5c,$fonts:"Roboto",$fontsize:14px )
+}
+.back2 {
+    background-color: #e5e5e5;
+}
+.contain-five {
+    @include contain;
+    height: 230px;
+}
+.block-kav {
+    font-family: Arial;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 32px;
+    color: #dcdcdc;
+}
+.block-txt {
+    @include font($colorf:#a1a1a1,$fonts:"Roboto Slab",$fontsize:20px );
+    text-align: center;
+}
+.back3 {
+    background-color: #dcdcdc;
+}
+.contain-six {
+    @include contain;
+}
+.foot-block {
+    margin-top: 30px;
+    width: 23%;
+    height: 300px;
+}
+.foot-h1 {
+    @include font($colorf:#6c6c6c,$fonts:"Roboto",$fontsize:18px );
+}
+.foot-txt {
+    @include font($colorf:#cacaca,$fonts:"Roboto",$fontsize:14px )
+}
+.pt {
+    padding-top: 20px;
+}
+.last {
+    padding-bottom: 50px;
+}
+.geo::before {
+    font-family: FontAwesome;
+    content: "\f3c5";
+    color: #a89574;
+    padding-right: 10px;
+}
+.date {
+    padding-left: 20px;
+}
+.tell::before {
+    font-family: FontAwesome;
+    content: "\f095";
+    color: #a89574;
+    padding-right: 9px;
+}
+.sms::before {
+    font-family: FontAwesome;
+    content: "\f0e0";
+    color: #a89574;
+    padding-right: 9px;
+}
+.twit::before {
+    font-family: FontAwesome;
+    content: "\f099";
+    color: #a89574;
+    padding-right: 9px;
+}
+.twit {
+    padding-left: 10px;
+}
